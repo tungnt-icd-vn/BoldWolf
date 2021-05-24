@@ -1,0 +1,101 @@
+/*------------------------------------------------------------
+	Header
+------------------------------------------------------------*/
+@mixin max($point) {
+	@media screen and (max-width: $point) {
+			@content;
+	}
+}
+@mixin min($point) {
+	@media screen and (min-width: $point) {
+			@content;
+	}
+}
+@mixin sp {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+.c-header {
+	transition: 0.3s ease-in-out;
+	&__inner{
+		z-index: 1000;
+    @include flex-jbetween;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,.307);
+    box-shadow: 0 6px 10px rgba(0,0,0,.2);
+    -webkit-transition: all .2s;
+    transition: all .2s;
+		color: #fff;
+	}
+	svg{
+		margin: 0 1rem;
+		display: inline-block;
+    vertical-align: -.125em;
+		color: $color2;
+	}
+	a{
+		text-decoration: none
+	}
+	&__top{
+		@include flex-jbetween;
+		width: 100%;
+		margin: 0 auto;
+		padding-bottom: 1rem;
+		border-bottom: 1px solid #0b6ea4;
+	}
+	&__left{
+		@include flex-jbetween;
+		@include max(768px) {
+			display: block;
+		}
+	}
+	&__lang{
+		color: $color2;
+    cursor: pointer;
+    margin-right: 2rem;
+	}
+	&__right{
+		@include flex-jbetween;
+	}
+	&__social{
+		margin-left: 2rem;
+		a{
+			&:nth-child(2){
+				margin: 0 1rem;
+			}
+			svg{
+				margin: 0 auto;
+			}
+		}
+	}
+	&__logo{
+		margin: 0;
+    height: 6.5rem;
+		img{
+			width: 10rem;
+			margin-top: .5rem;
+			object-fit: cover;
+		}
+	}
+	&__menu{
+		@include flex-jbetween;
+		align-items: center;
+		li{
+			a{
+				padding: .5rem 1.5rem;
+				color: hsla(0,0%,100%,.9);
+    		letter-spacing: .1rem;
+				transition: all .2s;
+				&:last-child{
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}
