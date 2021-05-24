@@ -7,3 +7,21 @@
 	color: $color1;
 	@include flex-center;
 }
+.l-container{
+	width: 100%;
+	@include min(576px){
+		max-width: 540px;
+	}
+	@include min(768px){
+		max-width: 720px;
+	}
+	@include min(992px){
+		max-width: 960px;
+	}
+	@include min(1200px){
+		max-width: 1140px;
+	}
+	@include min(1400px){
+		max-width: 1320px;
+	}
+}

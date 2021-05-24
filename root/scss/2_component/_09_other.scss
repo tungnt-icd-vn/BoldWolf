@@ -1,3 +1,29 @@
 /*------------------------------------------------------------
 	Other
 ------------------------------------------------------------*/
+.c-404{
+	position: relative;
+	padding-top: 5rem;
+	&__ttl{
+		font-size: 6rem;
+    text-align: center;
+    color: #185783;
+		margin-bottom: 3rem;
+	}
+	&__btn{
+		background-color: #0080c8;
+    border: 1px solid transparent;
+		text-decoration: none;
+		border-radius: .5rem;
+		height: 3.6rem;
+		padding: 7px 10px;
+		font-weight: bold;
+		color: #ffff;
+		transition: all .3s;
+		&:hover{
+			color: #0080c8;
+			background-color: #ffff;
+			border: 1px solid #0080c8;
+		}
+	}
+}

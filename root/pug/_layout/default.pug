@@ -6,6 +6,7 @@ block vars
   -keywords     = ''
   -pageID       = ''
   -path         = ''
+  -banner       = ''
   -Btitle        = ''
   -Bdescription  = ''
   -Bimg     = ''
@@ -21,12 +22,13 @@ html
     .container
       include ../_modules/header
       main.l-main
-        .c-banner
-          .c-banner__content
-            h1.c-banner__ttl=Btitle
-            p.c-banner__sub=Bdescription
-          .c-banner__item 
-            img(src=Bimg alt="Be Wild Be Wonder")
+        if banner != 'false'
+          .c-banner
+            .c-banner__content
+              h1.c-banner__ttl=Btitle
+              p.c-banner__sub=Bdescription
+            .c-banner__item 
+              img(src=Bimg alt="Be Wild Be Wonder")
         block container
       include ../_modules/footer
     script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")

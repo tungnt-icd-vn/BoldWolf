@@ -1,0 +1,18 @@
+extends _layout/default
+
+block vars
+  -title        = 'Trang chủ - Bold wolf'
+  -description  = ''
+  -keywords     = ''
+  -pageID       = 'top'
+  -path         = ''
+  -banner       = 'false'
+  -Btitle        = 'Có lỗi xảy ra'
+  -Bdescription  = 'Chúng tôi cố gắng khác phục sớm nhất có thẻ'
+  -Bimg     = path+'assets/images/image01.jpg'
+
+block container
+  .c-404
+    h1.c-404__ttl 404
+    a.c-404__btn(href="/") Trở về trang chủ
+
