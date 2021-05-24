@@ -1,4 +1,5 @@
 .c-blog{
+  position: relative;
   &__title{
     color: #24445e;
     text-align: center;
@@ -22,6 +23,13 @@
       width: 11rem;
       height: 1.5rem;
     }
+  }
+  &__description{
+    margin: 6rem auto;
+    position: relative;
+    color: #24445e;
+    text-align: center;
+    font-size: 1.8rem;
   }
   &__list{
     @include flex-jbetween;
@@ -52,7 +60,10 @@
     -webkit-line-clamp: 4;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    color: black;
+    color: #455461;
+    span{
+      font-weight: bold;
+    }
   }
   a{
     text-decoration: none;
@@ -65,5 +76,39 @@
     -webkit-box-orient: vertical;
     text-overflow: ellipsis;
     overflow-y: hidden;
+    text-transform: uppercase;
+    transition: all .2s;
+    cursor: pointer;
+    &--a{
+      font-size: 2rem;
+      color: rgba(0,128,200,.8);
+    }
+  }
+  &__listAd{
+    @include flex-jbetween;
+    flex-wrap: wrap;
+  }
+  &__itemAd{
+    cursor: pointer;
+    width: 31%;
+    margin: 1.5rem;
+    box-shadow: 0 6px 10px;
+    border-radius: 1rem;
+    padding-bottom: 2rem;
+    box-shadow: 0 6px 10px #0000002e;
+    img{
+      width: 100%;
+      object-fit: cover;
+      height: 100%;
+      border-radius: 1rem 1rem 0 0;
+    }
+  }
+  &__time{
+    @include flex-jbetween;
+    span{
+      color: #72808c;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
   }
 }
