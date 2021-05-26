@@ -24,9 +24,6 @@
       width: 11rem;
       height: 1.5rem;
 		}
-    @include max(768px){
-      color: red;
-    }
 }
 .description{
   text-align: center;
