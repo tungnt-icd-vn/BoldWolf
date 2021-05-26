@@ -87,6 +87,9 @@
   &__listAd{
     @include flex-jbetween;
     flex-wrap: wrap;
+    @include tb{
+      justify-content: center;
+    }
   }
   &__itemAd{
     cursor: pointer;
@@ -96,6 +99,12 @@
     border-radius: 1rem;
     padding-bottom: 2rem;
     box-shadow: 0 6px 10px #0000002e;
+    @include tb{
+      width: calc(50% - 30px);
+    }
+    @include sp{
+      width: calc(100% - 100px);
+    }
     img{
       width: 100%;
       object-fit: cover;

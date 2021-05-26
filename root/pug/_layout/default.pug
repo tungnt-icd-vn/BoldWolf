@@ -20,18 +20,17 @@ html
     title=title
     link(rel='stylesheet' href=path+'assets/css/style.css')
   body
-    .container
-      include ../_modules/header
-      main.l-main
-        if banner != 'false'
-          .c-banner
-            .c-banner__content
-              h1.c-banner__ttl=Btitle
-              p.c-banner__sub=Bdescription
-            .c-banner__item 
-              img(src=Bimg alt="Be Wild Be Wonder")
-        block container
-      include ../_modules/footer
-    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")
-    script(src=path+"assets/js/common.js")
+    include ../_modules/header
+    main.l-main
+      if banner != 'false'
+        .c-banner
+          .c-banner__content
+            h1.c-banner__ttl=Btitle
+            p.c-banner__sub=Bdescription
+          .c-banner__item 
+            img(src=Bimg alt="Be Wild Be Wonder")
+      block container
+    include ../_modules/footer
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+  script(src=path+"assets/js/common.js")
       
