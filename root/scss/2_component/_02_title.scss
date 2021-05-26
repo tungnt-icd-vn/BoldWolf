@@ -11,6 +11,11 @@
     text-transform: uppercase;
 		color: #24445e;
 		font-weight: 600;
+    @include sp{
+      font-size: 3.2rem;
+      line-height: 4.5rem;
+      font-weight: 700;
+    }
 		&::after{
 			position: absolute;
       content: "";

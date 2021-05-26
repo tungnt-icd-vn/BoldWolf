@@ -38,7 +38,7 @@
 		width: 40%;
     padding-left: 1rem;
     padding-right: 2rem;
-		@include sp{
+		@include tb{
 			width: 50%;
 			padding: 0;
 		}
@@ -46,9 +46,10 @@
 	&__menu{
     width: 30%;
 		text-align: left;
-		@include sp{
+		@include tb{
 			width: 50%;
 			padding-left: 1.5rem;
+			@include flex-center;
 		}
 		ul{
 			li{
@@ -69,6 +70,9 @@
     width: 30%;
 		text-align: left;
 		@include sp{
+			width: 100%;
+		}
+		@include tb{
 			width: 100%;
 		}
 		p{
@@ -123,12 +127,24 @@
     width: 100%;
 		flex-wrap: wrap;
 		margin: 2rem -5px 0;
+		@include tb{
+			justify-content: center;
+		}
 	}
 	&__image{
 		width: 25%;
 		padding: 5px;
+		@include tb{
+			width: 33.3%;
+		}
+		// @include sp{
+		// 	width: 50%;
+		// }
 		img{
 			width: 100%;
+			@include tb{
+				height: auto;
+			}
 			height: 4rem;
 			object-fit: cover;
 		}

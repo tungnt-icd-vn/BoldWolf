@@ -13,6 +13,10 @@
     background-repeat: no-repeat;
     background-size: 100%;
 		background-image: url(../../assets/images/banner-bg.svg);
+		@include max(1024px){
+			bottom: -18vh;
+			height: 30vh;
+		}
 	}
 	&__content{
 		position: absolute;
@@ -36,6 +40,10 @@
     letter-spacing: 2rem;
     position: relative;
     margin-bottom: 0;
+		@include sp{
+			font-size: 2.4rem;
+			margin-bottom: .5rem;
+		}
 		&::after{
 			position: absolute;
 			content: "";
