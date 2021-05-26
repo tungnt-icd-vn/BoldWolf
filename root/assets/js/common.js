@@ -7,3 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
     element.classList.toggle('is-active');
 	});
 });
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("navbar").style.display = "flex";
+  } else {
+    document.getElementById("navbar").style.display = "none";
+  }
+  prevScrollpos = currentScrollPos;
+}

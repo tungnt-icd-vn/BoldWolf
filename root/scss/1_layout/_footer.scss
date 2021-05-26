@@ -27,6 +27,9 @@
     margin: 0 auto;
 		padding-bottom: 1rem;
 		flex-wrap: wrap;
+		@include sp{
+			width: 90%;
+		}
 	}
 	&__info{
 		text-align: left;
@@ -35,10 +38,18 @@
 		width: 40%;
     padding-left: 1rem;
     padding-right: 2rem;
+		@include sp{
+			width: 50%;
+			padding: 0;
+		}
 	}
 	&__menu{
     width: 30%;
 		text-align: left;
+		@include sp{
+			width: 50%;
+			padding-left: 1.5rem;
+		}
 		ul{
 			li{
 				margin-bottom: 1rem;
@@ -57,6 +68,9 @@
 	&__flow{
     width: 30%;
 		text-align: left;
+		@include sp{
+			width: 100%;
+		}
 		p{
 			margin-bottom: 1rem;
 			opacity: .7;
@@ -77,6 +91,9 @@
 	&__num{
 		font-size: 4rem;
     font-weight: 600;
+		@include sp{
+			font-size: 1.8rem;
+		}
 	}
 	&__mail{
 		margin-bottom: 1em;
