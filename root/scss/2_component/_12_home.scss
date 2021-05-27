@@ -12,14 +12,24 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: 70%;
+		@include tb{
+			display: none;
+		}
 	}
 	&__text{
 		width: 60%;
 		padding: 5rem 0;
+		@include tb{
+			width: 100%;
+			background-image: url('../../assets/images/BG_Wolf.png');
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 50%;
+		}
 	}
 	&__ttl{
 		font-size: 4.2rem;
-    line-height: 4.5rem;
+    line-height: 1.5;
     font-weight: 700;
 	}
 	&__txt{
